@@ -38,7 +38,10 @@ for i = 1:length(num_points)
         plot(x, y_negative, 'k', 'LineWidth', 2); % Del krožnice z y < 0
         
         axis equal;
-      ....................................
+        title(['Izrisane točke in lok krožnice (', num2str(st_tock(i)), ' točk)']);
+        xlabel('X-os');
+        ylabel('Y-os');
+        legend('Notranjost kroga', 'Zunanjost kroga', 'Lok krožnice');
         hold off;
     end
 end
