@@ -16,7 +16,7 @@ for i = 1:length(num_points)
     
     fprintf('Število točk: %d, Ocena za π: %.6f, Napaka: %.6f\n', num_points(i), estimated_pi(i), error_pi(i));
     
-    % Izris grafa samo za 1000 točk
+    % Izrišemo graf pri 5000 naključnih točkah v in izven krožnice
     if num_points(i) == 5000
         % Preveri, ali so točke znotraj loka krožnice
         y_values = kroznica(points_in_square(1, :), 1);
@@ -28,7 +28,7 @@ for i = 1:length(num_points)
         hold on;
         plot(points_in_square(1, ~inside_circle), points_in_square(2, ~inside_circle), 'mx', 'MarkerSize', 6); % Točke zunaj kroga (rdeča barva)
         
-        % Risanje loka krožnice
+        % Izrišemo lok krožnice
         r = 1;
         x = linspace(-r, r, 1000); % Interval x od -r do r
         y_positive = kroznica(x, r); % Pozitivna y vrednost krožnice
@@ -43,7 +43,7 @@ for i = 1:length(num_points)
     end
 end
 
-% Izris rezultatov
+% Izrišemo rezultate
 figure;
 plot(num_points, error_pi, '-o');
 xlabel('Število naključnih točk');
