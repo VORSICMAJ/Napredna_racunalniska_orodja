@@ -9,7 +9,7 @@ function narisi_krog_in_tocke()
     tocke_notri = razdalja <= polmer;
     tocke_ven = razdalja > polmer;
     
-    scatter(x(tocke_notri), y(tocke_notri), 50, 'k', 'filled');
+    scatter(x(tocke_notri), y(tocke_notri), 50, 'c', 'filled');
     hold on;
     scatter(x(tocke_ven), y(tocke_ven), 50, 'm', '+');
     
